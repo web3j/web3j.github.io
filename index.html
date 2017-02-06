@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Conor Svensson">
+
+    <title>web3j - Java Ethereum integration library</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        var ga;
+        if (document.location.hostname.indexOf("web3j.io") > -1) {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        } else {
+            ga = function() {
+                console.log("ga:", arguments)
+            }
+        }
+
+        ga('create', 'UA-85710619-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">web3j.io</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#community">Community</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <img src="img/logos/ethereum-black-sm.png" class="img-responsive center-block">
+                <br>
+
+                <h1 id="homeHeading">Connect Java apps to the Ethereum blockchain</h1>
+                <hr>
+                <p>web3j is a lightweight, reactive, type safe Java and Android library for integrating with nodes on Ethereum blockchains</p>
+                <a href="https://github.com/web3j/web3j" target="_blank" class="btn btn-primary btn-xl page-scroll">
+                    <i class="fa fa-github"></i>
+                    &nbsp;web3j on GitHub
+                </a>
+                <a href="http://docs.web3j.io" target="_blank" class="btn btn-default btn-xl page-scroll">
+                    <i class="fa fa-file-text"></i>
+                    &nbsp;Documentation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Features</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-code text-primary sr-icons"></i>
+                        <h3>Smart contract wrappers</h3>
+                        <p class="text-muted">Create, deploy, transact with and call smart contracts from native Java code</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-id-card-o text-primary sr-icons"></i>
+                        <h3>Ethereum Wallet support</h3>
+                        <p class="text-muted">Create and manage Ethereum wallet files</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-terminal text-primary sr-icons"></i>
+                        <h3>Command line tools</h3>
+                        <p class="text-muted">Transfer Ether, manage wallets, generate wrappers from the command line</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-exchange text-primary sr-icons"></i>
+                        <h3>Reactive-functional API</h3>
+                        <p class="text-muted">Simple, fully asynchronous API supporting Futures or RxJava's Observables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Watch the overview</h2>
+                    <hr class="light">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ea3miXs_P6Y"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Projects</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="https://github.com/web3j/web3j/tree/android" target="_blank" class="portfolio-box">
+                        <img src="img/logos/android-logo-sm.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    web3j-android
+                                </div>
+                                <div class="project-name">
+                                    web3j Android library for Ethereum
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="https://github.com/web3j/web3j" target="_blank" class="portfolio-box" >
+                        <img src="img/logos/java-logo-sm.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    web3j-core
+                                </div>
+                                <div class="project-name">
+                                    Core web3j Java library for Ethereum
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                        <img src="img/logos/quorum-logo-sm.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    web3j-quorum
+                                </div>
+                                <div class="project-name">
+                                    web3j adapter for JP Morgan's Quorum
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="about2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Read the article</h2>
+                    <hr class="light">
+                    <p class="text-faded">web3j features in the January/February 2017 issue of Java Magazine</p>
+                    <a href="http://www.javamagazine.mozaicreader.com/JanFeb2017/Default/47/0#&pageSet=36&page=0" target="_blank">
+                        <img class="img-responsive" src="img/java-magazine.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2 class="section-heading">Starting building Ðapps</h2>
+                <hr class="light">
+                <a href="https://github.com/web3j/web3j" target="_blank" class="btn btn-primary btn-xl page-scroll">
+                    <i class="fa fa-github"></i>
+                    &nbsp;web3j on GitHub
+                </a>
+                <a href="http://docs.web3j.io" target="_blank" class="btn btn-default btn-xl page-scroll">
+                    <i class="fa fa-file-text"></i>
+                    &nbsp;Documentation
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="community">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Community</h2>
+                    <hr class="primary">
+                    <a href="https://gitter.im/web3j/web3j" target="_blank">
+                        <img class="img-responsive center-block" src="img/logos/gitter-logo.png">
+                    </a>
+                    <br>
+                    <p>Join the discussion on
+                        <a href="https://gitter.im/web3j/web3j" target="_blank">Gitter</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="copyright" class="container-fluid text-center bg-dark">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <br>
+                    <p>&copy; 2016-2017 Conor Svensson</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>
