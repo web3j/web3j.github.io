@@ -45,6 +45,16 @@ p {
 .bg-primary {
   background-color: #F05F40;
 }
+.bg-primary a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: white;
+}
+.bg-primary a:hover,
+.bg-primary a:focus {
+  color: #e6e6e6;
+}
 .bg-dark {
   background-color: #222222;
   color: white;

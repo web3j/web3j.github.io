@@ -48,6 +48,15 @@ p {
 
 .bg-primary {
     background-color: @theme-primary;
+
+    a {
+        .transition-all;
+        color: white;
+        &:hover,
+        &:focus {
+            color: darken(white, 10%);
+        }
+    }
 }
 
 .bg-dark {
