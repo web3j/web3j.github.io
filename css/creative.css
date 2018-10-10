@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Creative v3.3.7+1 (http://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2017 Start Bootstrap
+ * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 html,
@@ -36,6 +36,10 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+h2 img {
+  height: 2em;
+  width: auto;
 }
 p {
   font-size: 16px;
@@ -168,14 +172,14 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-color: #1b6d85;
+  background-color: #1d3a66;
   text-align: center;
   color: white;
 }
 header .header-content {
   position: relative;
   text-align: center;
-  padding: 100px 15px 100px;
+  padding: 200px 15px 150px;
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
